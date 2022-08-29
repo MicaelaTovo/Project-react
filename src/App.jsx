@@ -1,32 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/Navbar';
+import ItemCount from './Components/ItemCount/ItemCount';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 
 
-
-
 function App() {
-  return (
-    <div className="App">
-      <NavBar/>
-      <ItemListContainer greeting="mensaje de bienvenida" />
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
-    </div>
-  );
-}
-
-export default App;
+  const onAdd = (quantity) => {
+    (console.log(`Agrego ${quantity} productos al carrito`));
+  }
+  
+    return (
+      <div className="App">
+        <NavBar/>
+        <header className="App-header">
+        <ItemListContainer greeting= 'Agreue o reste productos:' />
+        <ItemCount stock={20} initial={1} onAdd={onAdd} />
+        </header>
+      </div>
+    );
+  }
+  
+  export default App;
+  
