@@ -1,7 +1,7 @@
-import React, { useStage }  from "react";
+import React, { useState }  from "react";
 
 const ItemCount = ({stock, initial, onAdd}) =>{
-    const [count, setCount] = useStage((initial));
+    const [count, setCount] = useState((initial));
 
     const restProduct = () =>{
         if (count > 1){

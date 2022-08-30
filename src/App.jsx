@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/Navbar';
-import ItemCount from './Components/ItemCount/ItemCount';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemCount from './Components/ItemCount/ItemCount';
+
 
 
 function App() {
