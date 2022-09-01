@@ -34,7 +34,7 @@ const onAdd = (quantity) => {
                 </p>
                 <ItemCount stock={20} initial={1} onAdd={onAdd} />
             </div>
-                <ItemList productos={product}/>
+                <ItemList product={product}/>
                 </>
                 )
         };
