@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 
 const Item = ({ product}) => {
     return <div>
-        <h1>
-            {product.title}</h1>
-            {product.price}
+        <h1>{product.title}</h1>
+        <img src={product.thumbnail} alt="" />
+        {product.price}
             </div>
 }
 

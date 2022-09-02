@@ -32,7 +32,7 @@ const onAdd = (quantity) => {
                 <p style={{ backgroundColor: 'lightgrey', color: 'black' }}>
                     {greeting}
                 </p>
-                <ItemCount stock={20} initial={1} onAdd={onAdd} />
+                {/* <ItemCount stock={20} initial={1} onAdd={onAdd} /> */}
             </div>
                 <ItemList product={product}/>
                 </>
