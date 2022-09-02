@@ -2,8 +2,8 @@ import Item from "./Item";
 
 const ItemList = ({product}) => {
     return (
-    product.map((product,id) => (
-        <Item product={product} />
+    product.map((product) => (
+        <Item product={product} key={product.id}/>
     ))
     )
 }

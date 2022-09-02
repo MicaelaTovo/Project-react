@@ -2,9 +2,13 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const Item = ({ product}) => {
-    return <>{product}</>
+    return <div>
+        <h1>
+            {product.title}</h1>
+            {product.price}
+            </div>
 }
-// ACA CAMBIE COMO ME DIJISTE, PERO ME SIGUE TIRANDO ERROR
+
 
 
 

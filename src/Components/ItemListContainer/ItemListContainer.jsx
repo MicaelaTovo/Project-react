@@ -12,7 +12,7 @@ const onAdd = (quantity) => {
     const [product, setProducts] = useState([])
     const cargarProductos = async () => {
             try {
-                const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=Ferrari')
+                const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=Muebles')
                 const data = await response.json()
                 setProducts(data.results);
             } catch (e) {
