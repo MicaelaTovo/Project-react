@@ -14,14 +14,18 @@ const ItemCount = ({stock, initial, onAdd}) =>{
         };
     }
 
+    const onAdd = (quantity) => {
+        (console.log(`Agrego ${quantity} productos al carrito`));
+    }
+
     return (
         <div>
-        <div className="flex item-center justify-center p-5 m-5 text-white bg-black">
-            <button className="p-5 btn-danger" onClick={restProduct}> - </button>
-            <span className="p-5">{count}</span>
-            <button className="p-5 btn-info" onClick={addProduct}> + </button>    
+        <div className="text-white bg-black">
+            <button className="btn-danger" onClick={restProduct}> - </button>
+            <span className="">{count}</span>
+            <button className="btn-info" onClick={addProduct}> + </button>    
         </div>
-        <div className= "flex item-center justify-center p-3 m-5 text-white bg-black" >
+        <div className= "text-white bg-black" >
             <button onClick={()=>onAdd(count)}> Agregar al carrito</button>
         </div>        
         </div>

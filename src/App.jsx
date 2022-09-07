@@ -2,10 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import ItemCount from './Components/ItemCount/ItemCount';
-
-
+import ItemListContainer from './Components/Container/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/Container/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -14,7 +12,8 @@ function App() {
       <div className="App">
         <NavBar/>
         <header className="App-header">
-        <ItemListContainer greeting= 'Agregue o reste productos:' />
+        {/* <ItemListContainer greeting= '' /> */}
+        <ItemDetailContainer />
         </header>
       </div>
     );
