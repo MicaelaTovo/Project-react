@@ -19,19 +19,12 @@ function App() {
       <Route path='/' element={<HomeContainer/>} />
       <Route path='/productos' element={<ItemListContainer greeting = ""/>} />
       <Route path='/categoria/:idCategorias' element={<ItemListContainer/>} />
-      <Route path='/item/:id' element={<ItemDetailContainer/>} />
+      <Route path='/productos/:id' element={<ItemDetailContainer/>} />
       <Route path='/checkout' element={<CheckoutContainer/>} />
 
     </Routes>
     </BrowserRouter>
 </>
-    //   <div className="App">
-    //     <NavBar/>
-    //     <header className="App-header">
-    //     {/* <ItemListContainer greeting= '' /> */}
-    //     <ItemDetailContainer />
-    //     </header>
-    //   </div>
     );
   }
   

@@ -11,6 +11,7 @@ import ItemList from "./ItemList";
     //     (console.log(`Agrego ${quantity} productos al carrito`));
     //     }
     const [product, setProducts] = useState([])
+
     const cargarProductos = async () => {
             try {
                 const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=cafeteras')

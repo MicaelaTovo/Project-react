@@ -11,7 +11,8 @@ const ItemDetailContainer = ()=> {
         try {
             const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=cafeteras')
             const data = await response.json()
-            setItem(data.results[id]);
+            data.filter(p => p.id === id)
+            setItem(data.results);
         } catch (e) {
             console.log(e);
         }
