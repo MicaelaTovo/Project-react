@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useParams } from "react"
 import ItemDetail from "./ItemDetail"
+
+
 
 const ItemDetailContainer = ()=> {
     const [product, setItem] = useState([])
+    const { id } = useParams ()
+
     const getItem = async () => {
         try {
-            const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=Iphone')
+            const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=cafeteras')
             const data = await response.json()
-            setItem(data.results[1]);
+            setItem(data.results[id]);
         } catch (e) {
             console.log(e);
         }

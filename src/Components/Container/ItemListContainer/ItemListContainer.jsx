@@ -1,6 +1,7 @@
 import React from "react";
 // import ItemCount from "../ItemCount/ItemCount";
 import { useEffect, useState } from 'react';
+import { useParams} from 'react-router-dom';
 import ItemList from "./ItemList";
 
 
@@ -12,7 +13,7 @@ import ItemList from "./ItemList";
     const [product, setProducts] = useState([])
     const cargarProductos = async () => {
             try {
-                const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=Iphone')
+                const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=cafeteras')
                 const data = await response.json()
                 setProducts(data.results);
             } catch (e) {

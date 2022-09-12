@@ -1,5 +1,5 @@
 const CartWidget = () => {
-    return <i className="ri-shopping-cart-2-line"/>
+    return <i class="ri-shopping-cart-line"></i>
 };
 
 export default CartWidget;
