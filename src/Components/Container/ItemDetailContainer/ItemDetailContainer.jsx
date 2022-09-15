@@ -1,4 +1,5 @@
-import { useState, useEffect, useParams } from "react"
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 
 
@@ -7,20 +8,20 @@ const ItemDetailContainer = ()=> {
     const [product, setItem] = useState([])
     const { id } = useParams ()
 
-    const getItem = async () => {
+    const getItem = async (param) => {
         try {
             const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=cafeteras')
             const data = await response.json()
-            data.filter(p => p.id === id)
-            setItem(data.results);
+            let result = data.results.filter((p) => p.id === param)
+            setItem(result);
         } catch (e) {
             console.log(e);
         }
     }
 
     useEffect(() => {
-        getItem()
-    }, [])
+        getItem(id)
+    }, [id])
     console.log(product)
 
     return (

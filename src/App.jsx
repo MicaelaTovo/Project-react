@@ -19,9 +19,8 @@ function App() {
       <Route path='/' element={<HomeContainer/>} />
       <Route path='/productos' element={<ItemListContainer greeting = ""/>} />
       <Route path='/categoria/:idCategorias' element={<ItemListContainer/>} />
-      <Route path='/productos/:id' element={<ItemDetailContainer/>} />
+      <Route path='/detalle/:id' element={<ItemDetailContainer/>} />
       <Route path='/checkout' element={<CheckoutContainer/>} />
-
     </Routes>
     </BrowserRouter>
 </>
@@ -30,3 +29,25 @@ function App() {
   
   export default App;
   
+
+
+
+
+
+
+
+
+
+
+
+  // <BrowserRouter>
+  //       <cartContext.Provider value={{ cartItems, setCartItems }}>
+  //         <Navbar />
+  //         <Routes>
+  //           <Route exact path='/' element={<ItemListContainer greeting='Welcome to our store' />} />
+  //           <Route path='/category/:categoryId' element={<ItemListContainer />} />
+  //           <Route path='/itemDetail/:itemId' element={<ItemDetailContainer />} />
+  //           <Route path='/cart' element={<Cart />} />
+  //         </Routes>
+  //       </cartContext.Provider>
+  //     </BrowserRouter>
