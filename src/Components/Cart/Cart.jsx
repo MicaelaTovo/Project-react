@@ -5,9 +5,16 @@ import CartItem from './CartItem';
 
 
 const Cart = ()=>{
-    const {carrito} = useContext (Context);
-    console.log(carrito);
-    return carrito.map(e=><CartItem product={e}/>);
+    const {carrito, clear} = useContext (Context);
+
+    return (
+    <>
+    {carrito.map((element)=>
+    (<CartItem product={element}/>)
+    )}
+    <button onClick={clear}>Vaciar Carrito</button>
+    </>
+  );
 }
 
 export default Cart; 
