@@ -5,14 +5,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './Components/Container/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/Container/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cart from './Components/Cart/Cart';
 import HomeContainer from './Components/Container/HomeContainer/HomeContainer';
-import CheckoutContainer from './Components/Container/CheckoutContainer/CheckoutContainer';
+import CartContext from './Components/Cart/CartContext';
+
 
 
 function App() {
 
     return (
-<>
+      <CartContext>
+        <>
     <BrowserRouter>
     <NavBar/>
     <Routes>
@@ -20,10 +23,11 @@ function App() {
       <Route path='/productos' element={<ItemListContainer greeting = ""/>} />
       <Route path='/categoria/:idCategorias' element={<ItemListContainer/>} />
       <Route path='/detalle/:id' element={<ItemDetailContainer/>} />
-      <Route path='/checkout' element={<CheckoutContainer/>} />
+      <Route path='/carrito' element={<Cart/>} />
     </Routes>
     </BrowserRouter>
 </>
+</CartContext>
     );
   }
   
