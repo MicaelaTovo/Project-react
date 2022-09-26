@@ -24,8 +24,12 @@ const Cart = () => {
             <Button variant="danger" onClick={clear}> Vaciar Carrito</Button>
             <Button variant="success"> Finalizar Compra</Button>
         </>
-        ) : (
+        ) : (<>
             <h4> El carrito de compra se encuentra vacío. </h4>
+            <Link to = {"/productos"}>
+            <Button variant="success">Ver productos</Button>
+            </Link>
+            </>
     )
 }
         </>
