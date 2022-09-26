@@ -13,7 +13,7 @@ const Item = ({ product}) => {
       <Card.Img variant="top" src={product.thumbnail} />
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
-        <Card.Text>{product.price}</Card.Text>
+        <Card.Text>$ {product.price}</Card.Text>
         <Link to= {`/detalle/${product.id}`}>
         <Button variant="success">COMPRAR</Button>
         </Link>

@@ -11,9 +11,9 @@ const ItemDetail = ({ product }) => {
 
     const {addItem} = useContext (Context)
     
-    const onAdd = (cant) =>{
-        addItem (product, cant)
-        setCarrito (carrito + cant);
+    const onAdd = (count) =>{
+        addItem (product, count)
+        setCarrito (carrito + count);
     };
 
     return (
