@@ -8,21 +8,33 @@ const ItemDetailContainer = ()=> {
     const [product, setItem] = useState([])
     const { id } = useParams ()
 
-    const getItem = async (param) => {
-        try {
-            const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=cafeteras')
-            const data = await response.json()
-            let result = data.results.filter((p) => p.id === param)[0]
-            setItem(result);
-        } catch (e) {
-            console.log(e);
-        }
-    }
+    // const getItem = async (param) => {
+    //     try {
+    //         const response = await fetch('../product.json')
+    //         const data = await response.json()
+    //         let result = data.results.filter((p) => p.id === param)[0]
+    //         setItem(result);
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
 
     useEffect(() => {
-        getItem(id)
-    }, [id])
-    console.log(product)
+        fetch ('./product.json')
+        .then ((res) => res.json())
+        .then ((data)=>{
+            setItem(data)
+        })
+            
+                // json =>{
+        //     const encontrado = json.find (product => product.id === parseInt(id))
+        //     setItem (encontrado)
+            // });
+        }, [] );
+
+    //     getItem(id)
+    // }, [id])
+    // console.log(product)
 
     return (
         <div>

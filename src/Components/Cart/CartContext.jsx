@@ -7,16 +7,27 @@ const CartContext = ({ children }) => {
 
     const addItem = (product, quantity) => {
         const prodAnt = isInCart(product.id)
-        if (prodAnt) {
-            const prodAnt = carrito.filter((e) => e.id !== product.id)
-            product.quantity = quantity + prodAnt.quantity;
-            prodAnt.push(product)
-            setCarrito(prodAnt)
-        } else {
+        if(prodAnt) {
+            prodAnt.quantity += quantity;
+        } else { 
             product.quantity = quantity;
-            setCarrito([...carrito, product])
-        };
+            carrito.push (product);
+        }
+        setCarrito([...carrito]);
+
     }
+
+        // const prodAnt = isInCart(product.id)
+        // if (prodAnt) {
+        //     const prodAnt = carrito.filter((e) => e.id !== product.id)
+        //     product.quantity = quantity + prodAnt.quantity;
+        //     prodAnt.push(product)
+        //     setCarrito(prodAnt)
+        // } else {
+        //     product.quantity = quantity;
+        //     setCarrito([...carrito, product])
+        // };
+    
 
     const isInCart = (productId) => {
         return carrito.find((e) => e.id === productId);
@@ -27,7 +38,8 @@ const CartContext = ({ children }) => {
     };
 
     const removeProduct = (productId) => {
-        setCarrito(carrito.filter((e) => e.id !== productId))
+        const carritoFiltrado = carrito.filter((e)=> e.id !== productId)
+        setCarrito(carritoFiltrado)
     };
 
     const total = () => {
@@ -39,7 +51,9 @@ const CartContext = ({ children }) => {
     }
 
 
-    return <Context.Provider value={{ addItem, carrito, clear, removeProduct, total }}>{children} </Context.Provider>;
+    return (
+    <Context.Provider value={{ addItem, isInCart, clear, removeProduct, total, carrito }}>{children} </Context.Provider>
+    )
 };
 
 export default CartContext;

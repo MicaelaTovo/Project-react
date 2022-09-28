@@ -6,14 +6,12 @@ import Item from '../ItemListContainer/Item';
 
 
 const ItemDetail = ({ product }) => {
-
     const [carrito, setCarrito]= useState (0);
-
     const {addItem} = useContext (Context)
     
     const onAdd = (count) =>{
         addItem (product, count)
-        setCarrito (carrito + count);
+        setCarrito (count);
     };
 
     return (

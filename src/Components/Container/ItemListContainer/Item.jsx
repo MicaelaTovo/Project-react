@@ -1,13 +1,9 @@
-import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import { Context } from '../../Cart/CartContext';
 
+const Item = ({product}) => {
 
-const Item = ({ product}) => {
-  const value = useContext (Context);
-  
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={product.thumbnail} />

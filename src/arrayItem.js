@@ -1,0 +1,68 @@
+const product = [
+        {
+            "id": 1,
+            "thumbnail": "https://ibb.co/JksfLhj",
+            "title": "Cafetera Nescafé Moulinex Dolce Gusto Genio S Plus automática roja",
+            "description": "Tecnología automática,capacidad de 0.8 Litros, potencia: 1500 W, cápsulas compatibles Dolce Gusto",
+            "price": "39.790",
+            "categoria": " cafeteras "
+        },
+        {
+            "id": 2,
+            "thumbnail": "https://ibb.co/jHgGQKj",
+            "title": "Cafetera Nescafé Moulinex Dolce Gusto Piccolo XS de corte manual black",
+            "description":"Tecnología manual, capacidad de 0.8 Litros, potencia: 1340 W, capsulas compatibles Dolce Gusto",
+            "price": "24.952",
+            "categoria": " cafeteras "
+        },
+        {
+            "id": 3,
+            "thumbnail": "https://ibb.co/sW77WrP",
+            "title": "Cafetera Nescafé Automática Genio S Blanca",
+            "description": "Tecnología automática, capacidad de 0.8 Litros, potencia: 1500 W, capsulas compatibles Dolce Gusto",
+            "price": "34.552",
+            "categoria": " cafeteras "
+        },
+        {
+            "id": 4,
+            "thumbnail": "https://ibb.co/BNXvXBj",
+            "title": "Café au lait en cápsula Nescafé Dolce Gusto",
+            "description": "Caja con 16 unidades, para taza de 200 ml",
+            "price": "945",
+            "categoria": " cafes "
+        },
+        {
+            "id": 5,
+            "thumbnail": "https://ibb.co/1ZpJ0G7",
+            "title": "Café late macchiato en cápsula Nescafé Dolce Gusto",
+            "description": "Caja con 16 unidades, para taza de 220 ml",
+            "price": "959",
+            "categoria": " cafes "
+        },
+        {
+            "id": 6,
+            "thumbnail": "https://ibb.co/41bCDrP",
+            "title": "Café cappuccino en cápsula Nescafé Dolce Gusto",
+            "description": "Caja con 16 unidades, para taza de 240 ml",
+            "price": "960",
+            "categoria": " cafes "
+        },
+        {
+            "id": 7,
+            "thumbnail": "https://ibb.co/8scJgz0",
+            "title": "Chocolate chococcino en cápsula Nescafé Dolce Gusto",
+            "description":"Caja con 16 aunidades, para taza de 250 ml",
+            "price": "1025",
+            "categoria": " cafes "
+        },
+        {
+            "id": 8,
+            "thumbnail": "https://ibb.co/92sHfZ5",
+            "title": "Café lungo en cápsula Nescafé Dolce Gusto",
+            "description": "Caja con 16 unidades, para taza de 120 ml",
+            "price": "979",
+            "categoria": " cafes "
+        }
+    ]
+    
+export default product;

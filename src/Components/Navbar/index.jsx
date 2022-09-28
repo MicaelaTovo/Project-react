@@ -14,11 +14,7 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="/">Inicio</Nav.Link>
             <Nav.Link href="/productos"> Cafeteras </Nav.Link>
-            <NavDropdown title="Preguntas frecuentes" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Uno</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"> Dos </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Tres</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="/productos"> Cafés </Nav.Link>
             <Nav.Link href="/carrito"> <CartWidget /> </Nav.Link>
           </Nav>
         </Navbar.Collapse>
