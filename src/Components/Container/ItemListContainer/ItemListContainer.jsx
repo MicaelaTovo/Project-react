@@ -7,7 +7,7 @@ import ItemList from "./ItemList";
     const ItemListContainer = () => {
 
     const [product, setProducts] = useState([])
-    const params = useParams();
+    const {id} = useParams();
 
     useEffect(() => {
         fetch ('./product.json')
@@ -15,7 +15,7 @@ import ItemList from "./ItemList";
         .then ((data)=>{
             setProducts(data)
         })
-
+    }, [id] )
 
             // if (categoria === undefined) {
             //     setProducts(json)
@@ -24,7 +24,7 @@ import ItemList from "./ItemList";
             // //     setProducts(arrayCategoria);
             // }
             // });
-        }, [] )
+
 
     // const cargarProductos = async () => {
     //         try {
